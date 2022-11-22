@@ -1,21 +1,19 @@
 <template>
- <h1>Events For Good</h1 >
+  <h1>Events for Good</h1>
   <div class="events">
-   
-    <EventCard v-for="event in events" :key="event.id" :event="event"  />
+    <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
-</template> 
+</template>
 
 <script>
-// @ is an alias to /src
-import EventCard from "@/components/EventCard.vue";
-import EventService from "@/services/EventService.js";
+import EventCard from '@/components/EventCard.vue'
+import EventService from '@/services/EventService.js'
 export default {
-  name: "EventList ",
+  name: 'EventList',
   components: {
     EventCard
   },
-  data(){
+  data() {
     return {
       events: null
     }
@@ -29,7 +27,7 @@ export default {
         console.log(error)
       })
   }
-};
+}
 </script>
 
 <style scoped>
